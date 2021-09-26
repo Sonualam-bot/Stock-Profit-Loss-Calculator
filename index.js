@@ -8,12 +8,12 @@ var outputBox = document.querySelector("#output-box");
 
 function calculateProfitAndLoss(initial, quantity, current) {
     if (initial > current) {
-        var loss = Number(initial - current);
+        var loss = Number(initial - current) * quantity;
         var lossPercentage = Number(loss * 100 / initial);
 
         showMessage(`Hey! Your loss is ${loss} and your lossPercentage is ${lossPercentage}%`);
     } else if (current > initial) {
-        var profit = Number(current - initial);
+        var profit = Number(current - initial) * quantity;
         var profitPercentage = Number(profit * 100 / initial);
 
         showMessage(`Hey! your profit is ${profit} and your profitPercentage is ${profitPercentage}%`);
