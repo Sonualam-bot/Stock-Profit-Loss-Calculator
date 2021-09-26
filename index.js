@@ -14,7 +14,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
         showMessage(`Hey! Your loss is ${loss} and your lossPercentage is ${lossPercentage}%`);
     } else if (current > initial) {
         var profit = Number(current - initial) * quantity;
-        var profitPercentage = (profit / initial) * 100
+        var profitPercentage = (profit / initial) * 100;
 
         showMessage(`Hey! your profit is ${profit} and your profitPercentage is ${profitPercentage}%`);
     } else {
@@ -29,9 +29,9 @@ function showMessage(message) {
 
 
 function submitHandler() {
-    var init = initialPrice.value;
-    var qty = stocksQuantity.value;
-    var curr = currentPrice.value;
+    var init = Number(initialPrice.value);
+    var qty = Number(stocksQuantity.value);
+    var curr = Number(currentPrice.value);
 
     calculateProfitAndLoss(init, qty, curr);
 }
