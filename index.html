@@ -15,6 +15,8 @@
           type="number"
           id="initial-price"
           placeholder="Enter the initial price here.."
+          min="0"
+          oninput="validity.valid ||(value ='' ) "
         />
       </label>
       <label for="stocks-quantity">
@@ -22,6 +24,8 @@
           type="number"
           id="stocks-quantity"
           placeholder="Enter stocks quantity here.."
+          min="0"
+          oninput="validity.valid ||(value ='' ) "
         />
       </label>
       <label for="current-price">
@@ -29,6 +33,8 @@
           type="number"
           id="current-price"
           placeholder="Enter the Current price here.."
+          min="0"
+          oninput="validity.valid ||(value ='' ) "
         />
       </label>
 
